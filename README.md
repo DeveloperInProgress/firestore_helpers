@@ -39,7 +39,10 @@ class QueryConstraint {
       this.isGreaterThan,
       this.isGreaterThanOrEqualTo,
       this.isNull,
-      this.arrayContains});
+      this.arrayContains,
+      this.arrayContainsAny,
+      this.whereIn,
+      this.whereNotIn});
 }
 
 /// Used by [buildQuery] to define how the results should be ordered. The fields 
