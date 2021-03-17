@@ -29,8 +29,10 @@ jobs:
         channel: 'beta'
         
     - run: flutter pub get
-    - run: flutter format --set-exit-if-changed
-    - run: flutter analyze
+    - run: flutter format lib/src/firebase_helpers.dart
+    - run: flutter format lib/src/geo_helpers.dart
+    - run: flutter analyze lib/src/firebase_helpers.dart
+    - run: flutter analyze lib/src/geo_helpers.dart
     
     
     
