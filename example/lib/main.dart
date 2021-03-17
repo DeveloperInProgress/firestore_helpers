@@ -45,6 +45,16 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+     final ButtonStyle raisedButtonStyle = ElevatedButton.styleFrom(
+        onPrimary: Colors.black87,
+        primary: Colors.grey[300],
+        minimumSize: Size(88, 36),
+        padding: EdgeInsets.symmetric(horizontal: 16),
+        shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(2)),
+      ),
+    );
+
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -101,7 +111,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 SizedBox(
                   width: 10.0,
                 ),
-                RaisedButton(
+                ElevatedButton(
+                  style: raisedButtonStyle,
                   child: Text('Update'),
                   onPressed: () => setState(() {}),
                 ),
@@ -147,7 +158,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 SizedBox(
                   width: 10.0,
                 ),
-                RaisedButton(
+                ElevatedButton(
+                  style: raisedButtonStyle,
                   child: Text('Add'),
                   onPressed: newName != null && newLatitude != null && newLongitude != null ? addLocation : null,
                 ),
