@@ -31,8 +31,7 @@ jobs:
     - run: flutter pub get
     - run: flutter format lib/src/firestore_helpers.dart
     - run: flutter format lib/src/geo_helpers.dart
-    - run: flutter analyze lib/src/firestore_helpers.dart
-    - run: flutter analyze lib/src/geo_helpers.dart
+    - run: flutter analyze lib/src/
     
     
     
